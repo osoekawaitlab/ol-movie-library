@@ -1,6 +1,6 @@
 from enum import Enum
 
-from oltl import Id, LowerBoundIntegerMixIn
+from oltl import BaseBytes, Id, LowerBoundIntegerMixIn
 
 
 class MovieId(Id):
@@ -31,3 +31,7 @@ class FrameNumber(LowerBoundIntegerMixIn):
     @classmethod
     def get_min_value(cls) -> int:
         return 0
+
+
+class PictureBytes(BaseBytes):
+    pass
