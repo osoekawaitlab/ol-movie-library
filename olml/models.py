@@ -8,6 +8,7 @@ from .types import (
     FrameNumber,
     MetadataId,
     MovieId,
+    PictureBytes,
     SegmentId,
     SourceId,
     SourceType,
@@ -42,3 +43,5 @@ class Segment(BaseEntity[SegmentId], BaseUpdateTimeAwareModel):  # type: ignore[
 
 class Frame(BaseEntity[FrameId], BaseUpdateTimeAwareModel):  # type: ignore[misc]
     number: FrameNumber
+    picture_bytes: PictureBytes
+    segment: SegmentId
