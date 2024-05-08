@@ -1,11 +1,14 @@
 from typing import Annotated, Literal
 
+import cv2
+import numpy as np
 from oltl import BaseEntity, BaseUpdateTimeAwareModel
 from pydantic import Field, FilePath
 
 from .types import (
     FrameId,
     FrameNumber,
+    Image,
     MetadataId,
     MovieId,
     PictureBytes,
