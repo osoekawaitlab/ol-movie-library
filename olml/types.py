@@ -1,7 +1,5 @@
 from enum import Enum
 
-import numpy as np
-import numpy.typing as npt
 from oltl import BaseBytes, Id, LowerBoundIntegerMixIn
 
 
@@ -37,6 +35,3 @@ class FrameNumber(LowerBoundIntegerMixIn):
 
 class PictureBytes(BaseBytes):
     pass
-
-
-class Image(npt.NDArray[np.uint8]): ...
