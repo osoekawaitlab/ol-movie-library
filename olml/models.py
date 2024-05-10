@@ -9,6 +9,7 @@ from pydantic import Field, FilePath
 from .types import (
     FrameId,
     FrameNumber,
+    FrameTime,
     MetadataId,
     MovieId,
     PictureBytes,
@@ -48,6 +49,7 @@ class Frame(BaseEntity[FrameId], BaseUpdateTimeAwareModel):  # type: ignore[misc
     number: FrameNumber
     picture_bytes: PictureBytes
     segment: SegmentId
+    time: FrameTime
 
     @property
     def image(self) -> npt.NDArray[np.uint8]:
